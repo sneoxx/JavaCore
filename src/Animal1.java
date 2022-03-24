@@ -1,5 +1,8 @@
 public class Animal1 extends Animal {
 
+  private static String str3 = "Статическая переменная Animal1 ";
+  private String str4 = "Нестатическая переменная Animal1 ";
+
   private String name;
 
   final static String CONSTANT_ANIMAL1 = "CONSTANT_Animal1";
@@ -8,6 +11,22 @@ public class Animal1 extends Animal {
   // String testField = "testFieldAnimal1";
 
   String testField1 = "testFieldAnimal1";
+
+  public Animal1() {
+    System.out.println("Конструктор Animal1 отработал");
+  }
+
+  {
+    System.out.println(str4);
+    System.out.println("...Нестатические переменные Animal1 проинициализированы... \n" +
+        "Нестатический блок Animal1");
+  }
+
+  static {
+    System.out.println(str3);
+    System.out.println("...Статические переменные Animal1 проинициализированы... \n" +
+        "Статический блок Animal1");
+  }
 
   @Override
   public void printName() {

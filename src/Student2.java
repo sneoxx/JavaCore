@@ -1,4 +1,4 @@
-public interface Student2 {
+public interface Student2 extends  Student {
 
   void printName();
 
